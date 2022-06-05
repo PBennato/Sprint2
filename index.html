@@ -1,71 +1,77 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="Es-es">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <div class="jumbotron jumbotron-fluid text-center">
-        <div class="container">
-          <h1 class="display-4">App de gastos</h1>
-          <p class="lead">Ingrese los gastos de cada persona.</p>
-        </div>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <title>App de gastos</title>
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid text-center">
+    <div class="container">
+      <h1 class="display-4">App de gastos</h1>
+      <p class="lead">Ingrese los gastos de cada persona.</p>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center text-center">
+    <form>
+      <div class="form-group text-center">
+        <label for="exampleInputEmail1">Nombre</label>
+        <input type="string" class="form-control" id="usuario" aria-describedby="emailHelp">
+
       </div>
-      
-    <div class="input-group mb-3">
-    <input type="string" class="form-control" placeholder="Nombre" id="usuario" aria-label="Recipient's username" aria-describedby="basic-addon2">
-    </div>
-    
-    <div class="input-group mb-3">
-        <input type="number" class="form-control" placeholder="Gastos" id="gasto" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <div class="input-group-append">
-         <a onclick="agregar()" id="boton" class="btn btn-outline-secondary" type="button" >Agregar</a>
-        </div>
-    </div>
-    
-    <div class="d-flex border my-2">
-        <div id="nameToShow"></div>
-        <div id="moneyToShow"></div>
-    </div>
+      <div class="form-group text-center">
+        <label for="exampleInputPassword1">Gasto</label>
+        <input type="string" class="form-control" id="gasto">
+      </div>
 
-    <div clas="border my-2">
-        <h4>Total gastado</h4>
-        <div id="total"></div>
-   </div>
+      <button onclick="agregar()" type="button" class="btn btn-primary text-center">Enviar</button>
+    </form>
+  </div>
 
-    <div clas="border my-2">
-        <h4>A pagar</h4>
-        <div id="cadaUno"></div>
-    </div>
+  <table class="table table-striped table text-center">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Monto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" id="contToShow"></th>
+        <td id="nameToShow"></td>
+        <td id="moneyToShow"></td>
+      </tr>
 
+    </tbody>
+  </table>
+  <table class="table table-striped table text-center">
+    <thead>
+      <tr>
+        <th scope="col">Total gastado</th>
+        <th scope="col">Total a pagar </th>
 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="total"></td>
+        <td id="cadaUno"></td>
+      </tr>
 
+    </tbody>
+  </table>
 
-    <div class="d-flex border my-2">
-        <div class="ms-2 border" id="nameToShow"></div>
-        <div class="ms-2 border" id="moneyToShow"></div>
-       
-    </div>
+</body>
 
-    <div>
-        <div id="total"></div>
-        <div id="cadaUno"></div>
-
-    </div>
-  
-
-    
-    
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-  </body>
 </html>
